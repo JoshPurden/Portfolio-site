@@ -1,21 +1,22 @@
 :root {
   --background-color: hsl(100, 54%, 84%);
   --text-color: #040404;
-  --font-30px: 30px;
-  --font-24px: 24px;
-  --font-18px: 18px;
-  --button-background-color: #6c046e;
+  --font-h1: 30px;
+  --font-h2: 24px;
+  --font-h3: 18px;
   --button-color: rgb(255, 255, 255);
   --border-bottom: 3px solid rgba(0, 0, 0, 0.3);
-  --secondary-background: #e07954;
   --secondary-color: #2b2b2b;
   --button-border: 2px solid rgba(0, 0, 0, 0.3);
+  --visited-color: #056e31;
+  --active-link: #9c7948;
+  --link-text: #047485;
 }
 
 body {
-  background-color:var(--background-color);
+  background-color: var(--background-color);
   /* background color light green */
-  color:var(--text-color);
+  color: var(--text-color);
   /* black text */
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -26,24 +27,24 @@ body {
 
 h1 {
   color: var(--text-color);
-  font-size: var(--font-30px);
+  font-size: var(--font-h1);
   font-weight: 700;
 }
 
 h2 {
   color: var(--text-color);
-  font-size: var(--font-24px);
+  font-size: var(--font-h2);
   font-weight: 700;
 }
 
 h3 {
   color: var(--text-color);
-  font-size: var(--font-18px);
+  font-size: var(--font-h3);
   font-weight: 700;
 }
 
 a {
-  color: #047485;
+  color: var(--link-text);
 }
 
 a:hover {
@@ -53,41 +54,14 @@ a:hover {
 
 a:visited {
   /* visited link */
-  color: #056e31;
+  color: var(--visited-color);
 }
 
 a:active {
   /* selected link */
-  color: #9c7948;
+  color: var(--active-link);
 }
 
-button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: var(--button-background-color);
-  color: var(--button-color);
-  text-decoration: none;
-  /* adds spacing to the button (this will be discussed more in-depth later) */
-  padding: 10px;
-  border-radius: 3px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: var(--border-bottom);
-}
-
-button:hover,
-button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
-}
-
-.button__secondary {
-  background-color: var(--secondary-background);
-  color: var(--secondary-color);
-}
 
 .profile {
   max-width: 700px;
